@@ -17,6 +17,7 @@ game = True
 while game == True and cash != 0:
     run = input()
     if run == 'y' or run == 'yes' or run == '':
+        cash -= 1
 # 1- First  |w1|w2|w3|
 # 2- Second |w4|w5|w6| (Main)
 # 3- Third  |w7|w8|w9|
@@ -63,7 +64,6 @@ while game == True and cash != 0:
                 print('You win $5')
         # Showcase
         else:
-            cash -= 1
             print('You lose')
         print(items[w1]+items[w2]+items[w3])
         print(items[w4]+items[w5]+items[w6])
