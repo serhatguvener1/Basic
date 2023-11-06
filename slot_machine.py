@@ -15,21 +15,21 @@ cash = 100
 items = ['🎰','🔔','🍇','🍊','🍋','🍒']
 game = True
 while game == True and cash != 0:
-    run = input()
+    run = input().lower()
     if run == 'y' or run == 'yes' or run == '':
         cash -= 1
 # 1- First  |w1|w2|w3|
 # 2- Second |w4|w5|w6| (Main)
 # 3- Third  |w7|w8|w9|
-        # 2- second (Main)          
+        # 2- Second (Main)          
         w4 = random.randint(0,5)
         w5 = random.randint(0,5)
         w6 = random.randint(0,5)
-        # 1- first
+        # 1- First
         w1 = w4 - 1
         w2 = w5 - 1
         w3 = w6 - 1
-        # 3- third
+        # 3- Third
         if w4 != 5:
             w7 = w4 + 1
         else:
