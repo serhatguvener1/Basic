@@ -1,4 +1,4 @@
-import random
+from random import randint
 print('''
 Welcome to Slot Machine!
 You have $100, spin = -$1, combinations:
@@ -22,9 +22,9 @@ while game == True and cash != 0:
 # 2- Second |w4|w5|w6| (Main)
 # 3- Third  |w7|w8|w9|
         # 2- Second (Main)          
-        w4 = random.randint(0,5)
-        w5 = random.randint(0,5)
-        w6 = random.randint(0,5)
+        w4 = randint(0,5)
+        w5 = randint(0,5)
+        w6 = randint(0,5)
         # 1- First
         w1 = w4 - 1
         w2 = w5 - 1
@@ -47,19 +47,19 @@ while game == True and cash != 0:
             if w4 == 0:
                 cash += 100
                 print('You win $100')
-            if w4 == 1:
+            elif w4 == 1:
                 cash += 75
                 print('You win $75')
-            if w4 == 2:
+            elif w4 == 2:
                 cash += 50
                 print('You win $50')
-            if w4 == 3:
+            elif w4 == 3:
                 cash += 25
                 print('You win $25')
-            if w4 == 4:
+            elif w4 == 4:
                 cash += 10
                 print('You win $10')
-            if w4 == 5:
+            elif w4 == 5:
                 cash += 5
                 print('You win $5')
         # Showcase
