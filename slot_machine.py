@@ -16,15 +16,13 @@ items = ['🎰','🔔','🍇','🍊','🍋','🍒']
 game = True
 while game == True and cash != 0:
     run = input().lower()
-    if run == 'y' or run == 'yes' or run == '':
+    if run in {'y','yes',''}:
         cash -= 1
 # 1- First  |w1|w2|w3|
 # 2- Second |w4|w5|w6| (Main)
 # 3- Third  |w7|w8|w9|
         # 2- Second (Main)          
-        w4 = randint(0,5)
-        w5 = randint(0,5)
-        w6 = randint(0,5)
+        w4,w5,w6 = randint(0,5),randint(0,5),randint(0,5)
         # 1- First
         w1 = w4 - 1
         w2 = w5 - 1
@@ -69,7 +67,7 @@ while game == True and cash != 0:
         print(items[w4]+items[w5]+items[w6])
         print(items[w7]+items[w8]+items[w9])
         print('Cash: $'+str(cash))
-    elif run == 'n' or run == 'no':
+    elif run in {'n','no'}:
         game = False
     else:
         print('Wrong input')
